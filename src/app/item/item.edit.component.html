@@ -1,0 +1,20 @@
+<h3>Cadastro Jogo Basquete - Maria</h3>
+
+<form #itemForm="ngForm" (ngSubmit)="validar(itemForm)">
+
+  <p-messages [(value)]="msgs"></p-messages>
+
+  <div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-md-6 ui-lg-4">
+    <p class="label">Digite Placar</p>
+    <input [(ngModel)]="placar" name="placar" type="number" size="30" pInputText required>
+    
+    <div *ngIf="placarValidation">
+      <p-message severity="error" text="{{ mensagemCampoObrigatorio }}"></p-message>
+    </div>
+  </div>
+
+</div>
+<button pButton type="button" (click)="redirectToList()" icon="pi pi-times" label="Cancelar" class="ui-button-danger" style="float:right;"></button>
+<p-button type="submit" icon="pi pi-check" label="Salvar" style="float:right; margin-right: 3px; margin-bottom: 30px;"></p-button>
+</form>
