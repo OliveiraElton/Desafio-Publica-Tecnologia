@@ -1,3 +1,9 @@
+Para executar projeto:
+
+1. npm i
+2. ng serve
+
+
 # ItemsRegister
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
